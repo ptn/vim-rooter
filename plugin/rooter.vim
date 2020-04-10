@@ -170,11 +170,7 @@ endfunction
 
 " For third-parties.  Not used by plugin.
 function! FindRootDirectory()
-  let s:fd = expand('%:p')
-
-  if empty(s:fd)
-    let s:fd = getcwd()
-  endif
+  let s:fd = getcwd()
 
   if g:rooter_resolve_links
     let s:fd = resolve(s:fd)
